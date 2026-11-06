@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#172554">
+    <meta name="description" content="نظام إدارة حضور الموظفين - تسجيل دخول تجريبي وإدارة موارد بشرية.">
+    <title>تسجيل الدخول</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="الرئيسية - نظام الحضور">
+                <span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
+                <span class="brand-name">نظام الحضور <small>إدارة الموارد البشرية</small></span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="التنقل الرئيسي">
+                <a class="active" href="index.html">الرئيسية</a>
+                <a href="employees.html">الموظفون</a>
+                <a href="reports.html">التقارير</a>
+                <a href="contact.html">تواصل معنا</a>
+            </nav>
+            <span class="nav-label"><i class="fa-regular fa-circle-user" aria-hidden="true"></i> بوابة الموظفين</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container login-layout">
+                <div class="welcome-copy">
+                    <span class="eyebrow"><span class="eyebrow-dot"></span> بوابتك إلى يوم عمل أكثر تنظيمًا</span>
+                    <h1>كل حضور يبدأ <span>بخطوة.</span></h1>
+                    <p>منصة واحدة تساعد فريقك على تنظيم بيانات الموظفين ومتابعة الحضور بسهولة ووضوح.</p>
+                    <div class="welcome-points">
+                        <div><span class="point-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></span><span><strong>فريقك في مكان واحد</strong><small>إدارة واضحة لبيانات الموظفين</small></span></div>
+                        <div><span class="point-icon point-icon-green"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span><span><strong>تقارير سهلة القراءة</strong><small>تابع الحضور والغياب بسرعة</small></span></div>
+                    </div>
+                </div>
+
+                <section class="panel login-card" aria-labelledby="login-title">
+                    <div class="login-card-heading">
+                        <span class="login-mark"><i class="fa-solid fa-lock" aria-hidden="true"></i></span>
+                        <span class="eyebrow">مرحبًا بعودتك</span>
+                        <h2 id="login-title">دخول النظام</h2>
+                        <p>أدخل بياناتك للمتابعة إلى النظام</p>
+                    </div>
+                    <form id="login-form" class="form-stack" novalidate>
+                        <label for="username">اسم المستخدم</label>
+                        <div class="input-wrap"><i class="fa-regular fa-user" aria-hidden="true"></i><input id="username" name="username" type="text" autocomplete="username" placeholder="أدخل اسم المستخدم" required minlength="2" maxlength="60"></div>
+                        <label for="password">كلمة المرور</label>
+                        <div class="input-wrap"><i class="fa-solid fa-key" aria-hidden="true"></i><input id="password" name="password" type="password" autocomplete="current-password" placeholder="أدخل كلمة المرور" required minlength="4" maxlength="100"><button class="password-toggle" type="button" aria-label="إظهار كلمة المرور" aria-pressed="false"><i class="fa-regular fa-eye" aria-hidden="true"></i></button></div>
+                        <label for="login-type">نوع تسجيل الدخول</label>
+                        <div class="input-wrap select-wrap"><i class="fa-solid fa-user-tag" aria-hidden="true"></i><select id="login-type" name="login_type" required><option value="" selected disabled>اختر نوع المستخدم</option><option value="admin">مدير النظام</option><option value="hr">موظف HR</option></select><i class="fa-solid fa-chevron-down select-chevron" aria-hidden="true"></i></div>
+                        <div class="button-row">
+                            <button class="button button-primary button-full" type="submit"><i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i> تسجيل الدخول</button>
+                            <button class="button button-secondary button-full" type="reset">إعادة تعيين</button>
+                        </div>
+                        <div class="form-message" id="login-message" role="status" aria-live="polite"></div>
+                    </form>
+                    <p class="demo-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> هذه واجهة تجريبية ولا تتحقق من حسابات حقيقية.</p>
+                </section>
+            </div>
+        </section>
+        <section class="login-bottom">
+            <div class="container login-bottom-inner"><span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> بيئة عرض تعليمية</span><span>نظام إدارة حضور الموظفين <bdi dir="ltr">EAMS</bdi></span></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span><span class="brand-name">نظام الحضور<small>إدارة الموارد البشرية</small></span></a>
+            <p>© <span data-current-year></span> نظام إدارة حضور الموظفين</p>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

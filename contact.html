@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#172554">
+    <meta name="description" content="تواصل مع فريق نظام إدارة حضور الموظفين.">
+    <title>تواصل معنا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="الرئيسية - نظام الحضور"><span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span><span class="brand-name">نظام الحضور <small>إدارة الموارد البشرية</small></span></a>
+            <button class="nav-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+            <nav class="main-nav" id="main-nav" aria-label="التنقل الرئيسي">
+                <a href="index.html">الرئيسية</a><a href="employees.html">الموظفون</a><a href="reports.html">التقارير</a><a class="active" href="contact.html">تواصل معنا</a>
+            </nav>
+            <span class="nav-label"><i class="fa-regular fa-circle-user" aria-hidden="true"></i> بوابة الموظفين</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container page-hero-content"><div><span class="eyebrow"><span class="eyebrow-dot"></span> نحن هنا لمساعدتك</span><h1>تواصل معنا</h1><p>أرسل استفسارك أو تواصل معنا عبر معلومات الاتصال أدناه.</p></div><div class="hero-decoration contact-decoration" aria-hidden="true"><i class="fa-regular fa-comments"></i></div></div>
+        </section>
+
+        <div class="container contact-layout">
+            <section class="panel content-panel contact-form-panel" aria-labelledby="contact-form-title">
+                <div class="panel-heading"><div><span class="section-kicker">رسالتك تهمنا</span><h2 id="contact-form-title">أرسل لنا رسالة</h2></div><span class="panel-icon"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></span></div>
+                <form id="contact-form" class="form-stack" novalidate>
+                    <div class="field"><label for="contact-name">الاسم</label><div class="input-wrap"><i class="fa-regular fa-user" aria-hidden="true"></i><input id="contact-name" name="name" type="text" placeholder="اكتب اسمك الكامل" required minlength="2" maxlength="80" autocomplete="name"></div></div>
+                    <div class="field"><label for="contact-email">البريد الإلكتروني</label><div class="input-wrap"><i class="fa-regular fa-envelope" aria-hidden="true"></i><input id="contact-email" name="email" type="email" placeholder="name@example.com" required maxlength="120" autocomplete="email" dir="ltr"></div></div>
+                    <div class="field"><label for="contact-message">الرسالة</label><textarea id="contact-message" name="message" rows="5" placeholder="كيف يمكننا مساعدتك؟" required minlength="10" maxlength="1000"></textarea></div>
+                    <button class="button button-primary contact-submit" type="submit"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> إرسال الرسالة</button>
+                    <div class="form-message" id="contact-message-status" role="status" aria-live="polite"></div>
+                </form>
+                <p class="demo-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> نموذج تجريبي؛ لا تُرسل الرسائل إلى خادم.</p>
+            </section>
+
+            <section class="panel contact-info-panel" aria-labelledby="contact-info-title">
+                <div class="panel-heading"><div><span class="section-kicker">معلومات التواصل</span><h2 id="contact-info-title">يسعدنا تواصلك</h2></div><span class="panel-icon panel-icon-blue"><i class="fa-solid fa-headset" aria-hidden="true"></i></span></div>
+                <div class="table-scroll">
+                    <table class="data-table contact-info-table">
+                        <thead><tr><th scope="col">وسيلة التواصل</th><th scope="col">التفاصيل</th></tr></thead>
+                        <tbody>
+                            <tr><td><span class="info-label"><span class="info-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span> البريد الإلكتروني</span></td><td><a href="mailto:attendance@company.sd" dir="ltr">attendance@company.sd</a></td></tr>
+                            <tr><td><span class="info-label"><span class="info-icon info-icon-green"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> الهاتف</span></td><td><a href="tel:0912345678" dir="ltr">0912345678</a></td></tr>
+                            <tr><td><span class="info-label"><span class="info-icon info-icon-purple"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span> الموقع</span></td><td>بورتسودان</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="contact-aside-note"><i class="fa-solid fa-heart" aria-hidden="true"></i><span><strong>نحن هنا لخدمتك</strong><small>يسعد فريقنا الرد على استفساراتك.</small></span></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span><span class="brand-name">نظام الحضور<small>إدارة الموارد البشرية</small></span></a><p>© <span data-current-year></span> نظام إدارة حضور الموظفين</p><a class="footer-contact-link" href="mailto:attendance@company.sd">راسلنا مباشرة</a></div></footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

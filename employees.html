@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#172554">
+    <meta name="description" content="إدارة قائمة الموظفين وإضافة بيانات جديدة.">
+    <title>قائمة الموظفين</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="employees">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="الرئيسية - نظام الحضور"><span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span><span class="brand-name">نظام الحضور <small>إدارة الموارد البشرية</small></span></a>
+            <button class="nav-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+            <nav class="main-nav" id="main-nav" aria-label="التنقل الرئيسي">
+                <a href="index.html">الرئيسية</a><a class="active" href="employees.html">الموظفون</a><a href="reports.html">التقارير</a><a href="contact.html">تواصل معنا</a>
+            </nav>
+            <span class="nav-label"><i class="fa-regular fa-circle-user" aria-hidden="true"></i> بوابة الموظفين</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container page-hero-content"><div><span class="eyebrow"><span class="eyebrow-dot"></span> إدارة الفريق</span><h1>قائمة الموظفين</h1><p>أضف بيانات فريقك واحتفظ بمعلومات الموظفين في مكان واحد.</p></div><div class="hero-decoration" aria-hidden="true"><i class="fa-solid fa-users"></i></div></div>
+        </section>
+
+        <div class="container content-layout">
+            <section class="panel content-panel" aria-labelledby="add-employee-title">
+                <div class="panel-heading"><div><span class="section-kicker">إضافة سجل جديد</span><h2 id="add-employee-title">بيانات الموظف</h2></div><span class="panel-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></span></div>
+                <form id="employee-form" class="form-grid" novalidate>
+                    <div class="field"><label for="employee-name">اسم الموظف</label><input id="employee-name" name="employee_name" type="text" placeholder="أدخل الاسم الكامل" required minlength="2" maxlength="80"></div>
+                    <div class="field"><label for="department">القسم</label><select id="department" name="department" required><option value="" selected disabled>اختر القسم</option><option>الموارد البشرية</option><option>تقنية المعلومات</option><option>المالية</option><option>الشؤون الإدارية</option><option>التسويق</option></select></div>
+                    <div class="field"><label for="employee-id">الرقم الوظيفي</label><input id="employee-id" name="employee_id" type="text" placeholder="مثال: 1004" required inputmode="numeric" pattern="[0-9]{3,10}" minlength="3" maxlength="10" aria-describedby="employee-id-hint"><small class="field-hint" id="employee-id-hint">أرقام فقط، من 3 إلى 10 خانات.</small></div>
+                    <div class="field field-submit"><span class="field-label-spacer" aria-hidden="true"></span><button class="button button-primary" type="submit"><i class="fa-solid fa-plus" aria-hidden="true"></i> إضافة موظف</button></div>
+                </form>
+                <div class="form-message" id="employee-message" role="status" aria-live="polite"></div>
+            </section>
+
+            <section class="panel table-panel" aria-labelledby="employee-list-title">
+                <div class="panel-heading table-panel-heading"><div><span class="section-kicker">دليل الفريق</span><h2 id="employee-list-title">الموظفون المسجلون <span class="count-badge" id="employee-count">٣</span></h2></div><div class="table-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><label class="sr-only" for="employee-search">ابحث عن موظف</label><input id="employee-search" type="search" placeholder="ابحث عن موظف..."></div></div>
+                <div class="table-scroll">
+                    <table class="data-table">
+                        <thead><tr><th scope="col">الرقم</th><th scope="col">الاسم</th><th scope="col">القسم</th><th scope="col">الحالة</th><th scope="col" class="actions-heading">إجراء</th></tr></thead>
+                        <tbody id="employee-table-body">
+                            <tr data-employee-id="1001"><td class="employee-number">١</td><td><span class="table-person"><span class="avatar avatar-blue">أ</span><strong>أحمد علي</strong></span></td><td>الموارد البشرية</td><td><span class="status-pill status-active"><span></span> نشط</span></td><td class="actions-cell"><span class="sample-label">عينة</span></td></tr>
+                            <tr data-employee-id="1002"><td class="employee-number">٢</td><td><span class="table-person"><span class="avatar avatar-purple">س</span><strong>سارة محمد</strong></span></td><td>تقنية المعلومات</td><td><span class="status-pill status-active"><span></span> نشط</span></td><td class="actions-cell"><span class="sample-label">عينة</span></td></tr>
+                            <tr data-employee-id="1003"><td class="employee-number">٣</td><td><span class="table-person"><span class="avatar avatar-green">م</span><strong>محمد عثمان</strong></span></td><td>المالية</td><td><span class="status-pill status-active"><span></span> نشط</span></td><td class="actions-cell"><span class="sample-label">عينة</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-footnote"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> يمكنك البحث في القائمة. السجلات المضافة هنا مؤقتة لهذه الجلسة فقط.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span><span class="brand-name">نظام الحضور<small>إدارة الموارد البشرية</small></span></a><p>© <span data-current-year></span> نظام إدارة حضور الموظفين</p><a class="footer-contact-link" href="contact.html">هل تحتاج إلى مساعدة؟</a></div></footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
